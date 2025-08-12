@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio | Nattharin Arnatthanankul</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="particles-js"></div>
+
+  <header class="fade-in header-flex">
+    <nav class="navbar">
+    <ul class="nav-links">
+      <a href="#about">About Me</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </ul>
+  </nav>
+
+  <div class="profile-header">
+    <img src="pin.jpg" alt="Nattharin Arnatthanankul" class="profile-img" />
+     <div class="profile-info">
+      <h1>Nattharin Arnatthanankul</h1>
+      <p class="position">Front-End Developer</p>
+    </div>
+  </div>
+  </header>
+
+  <main class="main-grid fade-in">
+    <section id="about" class="fade-in">
+      <h2>About Me</h2>
+      <p>ผมชอบพัฒนาเว็บและแก้ปัญหาที่ซับซ้อนด้วยโค้ด ทำงานกับ JavaScript, React และ Node.js ครับ</p>
+    </section>
+
+    <section id="projects" class="fade-in">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Project A:</strong> เว็บ e-commerce ขนาดเล็กที่รองรับการชำระเงินออนไลน์</li>
+        <li><strong>Project B:</strong> ระบบจัดการพนักงานภายในบริษัทที่ใช้งานง่าย</li>
+        <li><strong>Project C:</strong> Dashboard แสดงข้อมูลแบบเรียลไทม์สำหรับการวิเคราะห์</li>
+      </ul>
+    </section>
+
+    <section id="experience" class="fade-in">
+      <h2>Experience</h2>
+      <ul>
+        <li>2022 - ปัจจุบัน: Front-End Developer ที่ Tech Company</li>
+        <li>2020 - 2022: Junior Developer ที่ Web Solutions</li>
+      </ul>
+    </section>
+
+    <section id="skills" class="fade-in">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>HTML5</li>
+        <li>CSS3 / SASS</li>
+        <li>JavaScript (ES6+)</li>
+        <li>React</li>
+        <li>Node.js / Express</li>
+        <li>Git / GitHub</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="fade-in">
+      <h2>Contact</h2>
+      <p>Email: nattharin3004@email.com</p>
+      <p>GitHub: <a href="https://github.com/nattharin" target="_blank" rel="noopener noreferrer">github.com/nattharin</a></p>
+      <p>LinkedIn: <a href="#" target="_blank" rel="noopener noreferrer">linkedin.com/in/nattharin</a></p>
+    </section>
+  </main>
+
+  <footer class="fade-in">
+    <p>© 2025 Nattharin Arnatthanankul | Made with ❤️</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script>
+    // Particle.js config
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 40 },
+    color: { value: "#0ea5e9" },
+    shape: { type: "circle" },
+    opacity: { value: 0.3 },
+    size: { value: 3 },
+    line_linked: {
+      enable: true,
+      distance: 120,
+      color: "#0ea5e9",
+      opacity: 0.15,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 1
+    }
+  }
+});
+
+// Fade-in on scroll
+const fadeElems = document.querySelectorAll('.fade-in');
+function checkFade() {
+  fadeElems.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if(rect.top < window.innerHeight - 100) {
+      el.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', checkFade);
+window.addEventListener('load', checkFade);
+
+  </script>
+</body>
+</html>
