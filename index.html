@@ -3,80 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio | Nattharin Arnatthanankul</title>
+  <title>Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <div id="particles-js"></div>
 
-  <header class="fade-in header-flex">
-    <nav class="navbar">
+  <!-- Navbar -->
+  <nav class="navbar fade-in">
+    <div class="logo">Portfolio</div>
     <ul class="nav-links">
-      <a href="#about">About Me</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <div class="profile-header">
+  <!-- Profile Header -->
+  <header class="profile-header fade-in">
     <img src="pin.jpg" alt="Nattharin Arnatthanankul" class="profile-img" />
-     <div class="profile-info">
+    <div class="profile-info">
       <h1>Nattharin Arnatthanankul</h1>
       <p class="position">Front-End Developer</p>
     </div>
-  </div>
   </header>
 
-  <main class="main-grid fade-in">
-    <section id="about" class="fade-in">
+  <!-- Main Content -->
+  <main class="main fade-in">
+    <section id="about">
       <h2>About Me</h2>
-      <p>ผมชอบพัฒนาเว็บและแก้ปัญหาที่ซับซ้อนด้วยโค้ด ทำงานกับ JavaScript, React และ Node.js ครับ</p>
+      <p>Hello! I’m Nattharin Arnatthanankul, a web developer who enjoys designing and building Front-End applications, 
+        especially creating UIs that are user-friendly and highly responsive. I work with JavaScript, React, Node.js, 
+        and various development tools to deliver projects that are both visually appealing and efficient. 
+        I believe that working with fun and creativity brings out the best in every project.</p>
     </section>
 
-    <section id="projects" class="fade-in">
+    <section id="projects">
       <h2>Projects</h2>
-      <ul>
-        <li><strong>Project A:</strong> เว็บ e-commerce ขนาดเล็กที่รองรับการชำระเงินออนไลน์</li>
-        <li><strong>Project B:</strong> ระบบจัดการพนักงานภายในบริษัทที่ใช้งานง่าย</li>
-        <li><strong>Project C:</strong> Dashboard แสดงข้อมูลแบบเรียลไทม์สำหรับการวิเคราะห์</li>
-      </ul>
+      <div class="projects-wrapper">
+        <button class="scroll-btn left">&#8592;</button>
+        <div class="projects-scroll">
+          <div class="project-card">
+            <div class="project-icon">👨‍💼</div>
+            <h3>DII-GEN6-CompoundSEC</h3>
+            <p>This is a project-based learning activity for 
+              CAMT-DII Gen6 students using OOP.</p>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">🛒</div>
+            <h3>Project Bookstore</h3>
+            <p>Online bookstore with editable book details and shopping cart functionality</p>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">📊</div>
+            <h3>Flowchart Instructional Game</h3>
+            <p>Coin-collecting running game with random questions at each level.</p>
+          </div>
+        </div>
+        <button class="scroll-btn right">&#8594;</button>
+      </div>
     </section>
 
-    <section id="experience" class="fade-in">
+
+
+  <div class="experience-skills">
+    <section id="experience">
       <h2>Experience</h2>
-      <ul>
-        <li>2022 - ปัจจุบัน: Front-End Developer ที่ Tech Company</li>
-        <li>2020 - 2022: Junior Developer ที่ Web Solutions</li>
-      </ul>
+      <div class="timeline">
+        <div class="timeline-item fade-in">
+          <div class="timeline-date">2024 - now</div>
+          <div class="timeline-content">
+            <h3>Front-End Developer</h3>
+            <p>Tech Company</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="timeline-date">2023</div>
+          <div class="timeline-content">
+            <h3>The National Science, Mathematics and Technology 3rd Conference for the DPSTE</h3>
+            <p>Gold medal - Flowchart Instructional Game by Godot Engine</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="skills" class="fade-in">
+
+    <section id="skills">
       <h2>Skills</h2>
       <ul class="skills-list">
-        <li>HTML5</li>
-        <li>CSS3 / SASS</li>
-        <li>JavaScript (ES6+)</li>
-        <li>React</li>
-        <li>Node.js / Express</li>
-        <li>Git / GitHub</li>
+        <p>HTML</p>
+        <p>CSS</p>
+        <p>UX/UI</p>
+        <p>Tailwind</p>
+        <p>JavaScript</p>
+        <p>Node.js</p>
+        <p>GitHub</p>
+        <p>Godot Engine</p>
       </ul>
     </section>
+  </div>
 
-    <section id="contact" class="fade-in">
+    <section id="contact">
       <h2>Contact</h2>
       <p>Email: nattharin3004@email.com</p>
-      <p>GitHub: <a href="https://github.com/nattharin" target="_blank" rel="noopener noreferrer">github.com/nattharin</a></p>
-      <p>LinkedIn: <a href="#" target="_blank" rel="noopener noreferrer">linkedin.com/in/nattharin</a></p>
+      <p>GitHub: <a href="https://github.com/pin-nattharin" target="_blank">github.com/pin-nattharin</a></p>
+      <!-- <p>LinkedIn: <a href="#" target="_blank">linkedin.com/in/nattharin</a></p> -->
     </section>
   </main>
 
-  <footer class="fade-in">
-    <p>© 2025 Nattharin Arnatthanankul | Made with ❤️</p>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Nattharin Arnatthanankul</p>
   </footer>
 
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
   <script>
     // Particle.js config
@@ -85,7 +128,7 @@ particlesJS("particles-js", {
     number: { value: 40 },
     color: { value: "#0ea5e9" },
     shape: { type: "circle" },
-    opacity: { value: 0.3 },
+    opacity: { value: 0.2 },
     size: { value: 3 },
     line_linked: {
       enable: true,
@@ -94,10 +137,7 @@ particlesJS("particles-js", {
       opacity: 0.15,
       width: 1
     },
-    move: {
-      enable: true,
-      speed: 1
-    }
+    move: { enable: true, speed: 1 }
   }
 });
 
@@ -106,14 +146,26 @@ const fadeElems = document.querySelectorAll('.fade-in');
 function checkFade() {
   fadeElems.forEach(el => {
     const rect = el.getBoundingClientRect();
-    if(rect.top < window.innerHeight - 100) {
+    if (rect.top < window.innerHeight - 100) {
       el.classList.add('visible');
     }
   });
 }
-
 window.addEventListener('scroll', checkFade);
 window.addEventListener('load', checkFade);
+
+const scrollLeftBtn = document.querySelector('.scroll-btn.left');
+const scrollRightBtn = document.querySelector('.scroll-btn.right');
+const projectsScroll = document.querySelector('.projects-scroll');
+
+scrollLeftBtn.addEventListener('click', () => {
+  projectsScroll.scrollBy({ left: -300, behavior: 'smooth' });
+});
+
+scrollRightBtn.addEventListener('click', () => {
+  projectsScroll.scrollBy({ left: 300, behavior: 'smooth' });
+});
+
 
   </script>
 </body>
