@@ -60,6 +60,28 @@ html {
   color: #0ea5e9;
 }
 
+@media (max-width: 720px) {
+  /* Navbar ยังเป็นแนวนอน แต่ย่อได้ */
+  .nav-links {
+    display: flex;
+    flex-wrap: nowrap; /* ไม่ตัดบรรทัด */
+    overflow-x: auto; /* เลื่อนแนวนอนได้ */
+    gap: 15px;
+    padding-bottom: 5px;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none; /* ซ่อน scrollbar */
+  }
+
+  /* ลด padding navbar ให้พอดีจอเล็ก */
+  .navbar {
+    padding: 10px 15px;
+  }
+}
+
+
+
 /* Profile Header */
 .profile-header {
   display: flex;
@@ -78,6 +100,14 @@ html {
   box-shadow: 0 0 20px rgba(14,165,233,0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+@media (max-width: 720px) {
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
 
 .profile-img:hover {
   transform: scale(1.1); /* ขยาย 110% */
@@ -204,7 +234,10 @@ section h2 {
 }
 
 .project-card {
-  min-width: 400px;
+  min-width: 280px;
+  flex: 0 0 auto;
+  width: 90%;
+  max-width: 400px;
   background: rgba(50, 69, 98, 0.85);
   border-radius: 12px;
   padding: 20px;
@@ -226,7 +259,7 @@ section h2 {
 }
 
 .scroll-btn {
-  position: absolute;
+  position: fixed;
   top: 50%;
   transform: translateY(-50%);
   background: rgba(14,165,233,0.8);
@@ -236,21 +269,29 @@ section h2 {
   padding: 15px 18px;
   cursor: pointer;
   border-radius: 50%;
-  z-index: 10;
+  z-index: 999;
   transition: background 0.3s;
+}
+
+.scroll-btn.left  { left: -100px; }
+.scroll-btn.right { right: -100px; }
+
+@media (max-width: 720px) {
+  .scroll-btn.left  { left: 5px; }   /* บนจอเล็กให้ชิดขอบ */
+  .scroll-btn.right { right: 5px; }
 }
 
 .scroll-btn:hover {
   background: #0ea5e9;
 }
 
-.scroll-btn.left {
-  left: -100px;
+@media (max-width: 720px) {
+  .scroll-btn {
+    padding: 10px 12px;
+    font-size: 1.2rem;
+  }
 }
 
-.scroll-btn.right {
-  right: -100px;
-}
 
 
 .project-icon {
@@ -450,5 +491,48 @@ footer {
   text-decoration: underline;
 }
 
+/* เด้งขึ้น */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.02);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ใช้กับ fade-in เดิม */
+.fade-in.visible {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+
+/* เอฟเฟกต์เด้งขึ้น */
+@keyframes bounceUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-8px) scale(1.02);
+  }
+  80% {
+    transform: translateY(4px) scale(0.99);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ใช้ตอน element ถูกมองเห็น */
+.fade-in.visible {
+  animation: bounceUp 0.8s ease-out forwards;
+}
 
 
